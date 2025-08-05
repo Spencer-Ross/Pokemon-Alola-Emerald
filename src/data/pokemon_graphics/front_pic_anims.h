@@ -2937,6 +2937,26 @@ static const union AnimCmd sAnim_Rowlet_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_Dartrix_1[] =
+{
+    ANIMCMD_FRAME(0, 6),
+    ANIMCMD_FRAME(1, 15),
+    ANIMCMD_FRAME(0, 6),
+    ANIMCMD_FRAME(1, 15),
+    ANIMCMD_FRAME(0, 3),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_Decidueye_1[] =
+{
+    ANIMCMD_FRAME(0, 6),
+    ANIMCMD_FRAME(1, 15),
+    ANIMCMD_FRAME(0, 6),
+    ANIMCMD_FRAME(1, 15),
+    ANIMCMD_FRAME(0, 3),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_Grovyle_1[] =
 {
     ANIMCMD_FRAME(0, 10),
