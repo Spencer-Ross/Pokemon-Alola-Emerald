@@ -275,6 +275,8 @@ gCryTable::
 	cry Cry_Blaziken
 	cry Cry_Treecko
 	cry Cry_Rowlet
+	cry Cry_Dartrix
+	cry Cry_Decidueye
 	cry Cry_Grovyle
 	cry Cry_Sceptile
 	cry Cry_Mudkip
@@ -667,6 +669,8 @@ gCryTable_Reverse::
 	cry_reverse Cry_Blaziken
 	cry_reverse Cry_Treecko
 	cry_reverse Cry_Rowlet
+	cry_reverse Cry_Dartrix
+	cry_reverse Cry_Decidueye
 	cry_reverse Cry_Grovyle
 	cry_reverse Cry_Sceptile
 	cry_reverse Cry_Mudkip
