@@ -1487,6 +1487,14 @@ Cry_Rowlet::
 	.incbin "sound/direct_sound_samples/cries/rowlet.bin"
 
 	.align 2
+Cry_Dartrix::
+	.incbin "sound/direct_sound_samples/cries/dartrix.bin"
+
+	.align 2
+Cry_Decidueye::
+	.incbin "sound/direct_sound_samples/cries/decidueye.bin"
+
+	.align 2
 Cry_Grovyle::
 	.incbin "sound/direct_sound_samples/cries/grovyle.bin"
 
