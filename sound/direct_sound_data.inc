@@ -1488,7 +1488,7 @@ Cry_Rowlet::
 
 	.align 2
 Cry_Dartrix::
-	.incbin "sound/direct_sound_samples/cries/dartix.bin"
+	.incbin "sound/direct_sound_samples/cries/dartrix.bin"
 
 	.align 2
 Cry_Decidueye::
