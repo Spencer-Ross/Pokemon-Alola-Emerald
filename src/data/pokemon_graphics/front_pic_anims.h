@@ -5107,6 +5107,8 @@ SINGLE_ANIMATION(Celebi);
 SINGLE_ANIMATION(OldUnownB);
 SINGLE_ANIMATION(Treecko);
 SINGLE_ANIMATION(Rowlet);
+SINGLE_ANIMATION(Dartrix);
+SINGLE_ANIMATION(Decidueye);
 SINGLE_ANIMATION(Grovyle);
 SINGLE_ANIMATION(Sceptile);
 SINGLE_ANIMATION(Torchic);
@@ -5564,6 +5566,8 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     [SPECIES_OLD_UNOWN_Z] = sAnims_OldUnownB,
     [SPECIES_TREECKO]     = sAnims_Treecko,
     [SPECIES_ROWLET]     = sAnims_Rowlet,
+    [SPECIES_DARTRIX]     = sAnims_Dartrix,
+    [SPECIES_DECIDUEYE]   = sAnims_Decidueye,
     [SPECIES_GROVYLE]     = sAnims_Grovyle,
     [SPECIES_SCEPTILE]    = sAnims_Sceptile,
     [SPECIES_TORCHIC]     = sAnims_Torchic,
