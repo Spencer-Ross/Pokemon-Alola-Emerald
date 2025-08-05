@@ -6674,6 +6674,28 @@ const union {
         .ROCK_SMASH = TRUE,
     } },
 
+    [SPECIES_DARTRIX] = { .learnset = {
+        .AERIAL_ACE = TRUE,
+        .BULLET_SEED = TRUE,
+        .DOUBLE_TEAM = TRUE,
+        .TOXIC = TRUE,
+        .CUT = TRUE,
+        .FLY = TRUE,
+        .FLASH = TRUE,
+        .ROCK_SMASH = TRUE,
+    } },
+
+    [SPECIES_DECIDUEYE] = { .learnset = {
+        .AERIAL_ACE = TRUE,
+        .BULLET_SEED = TRUE,
+        .DOUBLE_TEAM = TRUE,
+        .TOXIC = TRUE,
+        .CUT = TRUE,
+        .FLY = TRUE,
+        .FLASH = TRUE,
+        .ROCK_SMASH = TRUE,
+    } },
+    
     [SPECIES_GROVYLE] = { .learnset = {
         .FOCUS_PUNCH = TRUE,
         .TOXIC = TRUE,

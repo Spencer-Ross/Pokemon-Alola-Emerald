@@ -282,6 +282,8 @@ const struct CompressedSpriteSheet gMonStillFrontPicTable[] =
 // Gen III
     SPECIES_SPRITE(TREECKO,       gMonStillFrontPic_Treecko),
     SPECIES_SPRITE(ROWLET,        gMonStillFrontPic_Rowlet),
+    SPECIES_SPRITE(DARTRIX,      gMonStillFrontPic_Dartrix),
+    SPECIES_SPRITE(DECIDUEYE,    gMonStillFrontPic_Decidueye),
     SPECIES_SPRITE(GROVYLE,       gMonStillFrontPic_Grovyle),
     SPECIES_SPRITE(SCEPTILE,      gMonStillFrontPic_Sceptile),
     SPECIES_SPRITE(TORCHIC,       gMonStillFrontPic_Torchic),

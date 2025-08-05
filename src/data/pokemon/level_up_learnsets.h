@@ -3600,6 +3600,41 @@ static const u16 sRowletLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
+// Dartrix Gen 7 moves converted to Gen 3 equivalents
+static const u16 sDartrixLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_SCRATCH), // Tackle/Leafage → Scratch
+    LEVEL_UP_MOVE( 1, MOVE_DEFENSE_CURL), // Growl → Defense Curl
+    LEVEL_UP_MOVE( 8, MOVE_PECK), // Peck
+    LEVEL_UP_MOVE(11, MOVE_ASTONISH), // Astonish
+    LEVEL_UP_MOVE(15, MOVE_RAZOR_LEAF), // Razor Leaf
+    LEVEL_UP_MOVE(18, MOVE_FORESIGHT), // Foresight
+    LEVEL_UP_MOVE(22, MOVE_WING_ATTACK), // Wing Attack
+    LEVEL_UP_MOVE(25, MOVE_SYNTHESIS), // Synthesis
+    LEVEL_UP_MOVE(29, MOVE_FURY_ATTACK), // Fury Attack
+    LEVEL_UP_MOVE(36, MOVE_LEAF_BLADE), // Leaf Blade
+    LEVEL_UP_MOVE(41, MOVE_FEATHER_DANCE), // Feather Dance
+    LEVEL_UP_MOVE(46, MOVE_GIGA_DRAIN), // Giga Drain
+    LEVEL_UP_END
+};
+
+// Decidueye Gen 7 moves converted to Gen 3 equivalents
+static const u16 sDecidueyeLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_SCRATCH), // Tackle/Leafage → Scratch
+    LEVEL_UP_MOVE( 1, MOVE_DEFENSE_CURL), // Growl → Defense Curl
+    LEVEL_UP_MOVE( 8, MOVE_PECK), // Peck
+    LEVEL_UP_MOVE(11, MOVE_ASTONISH), // Astonish
+    LEVEL_UP_MOVE(15, MOVE_RAZOR_LEAF), // Razor Leaf
+    LEVEL_UP_MOVE(18, MOVE_FORESIGHT), // Foresight
+    LEVEL_UP_MOVE(22, MOVE_WING_ATTACK), // Wing Attack
+    LEVEL_UP_MOVE(25, MOVE_SYNTHESIS), // Synthesis
+    LEVEL_UP_MOVE(29, MOVE_FURY_ATTACK), // Fury Attack
+    LEVEL_UP_MOVE(36, MOVE_LEAF_BLADE), // Leaf Blade
+    LEVEL_UP_MOVE(41, MOVE_FEATHER_DANCE), // Feather Dance
+    LEVEL_UP_MOVE(46, MOVE_GIGA_DRAIN), // Giga Drain
+    LEVEL_UP_MOVE(55, MOVE_SHADOW_BALL), // Spirit Shackle → Shadow Ball
+    LEVEL_UP_END
+};
+
 static const u16 sGrovyleLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_POUND),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
