@@ -1521,6 +1521,18 @@ const u8 gRowletPokedexText[] = _(
     "to store up energy during the day,\n"
     "while becoming active at night.");
 
+const u8 gDartrixPokedexText[] = _(
+    "A bit of a dandy, it spends its free time\n"
+    "preening its wings. Its throwing feathers\n"
+    "are sharp enough to pierce enemies at a\n"
+    "distance.");
+
+const u8 gDecidueyePokedexText[] = _(
+    "It nocks a feather arrow and sends it\n"
+    "soaring through the sky to strike its\n"
+    "opponents. It is known for its silent,\n"
+    "precise attacks.");
+
 const u8 gGrovylePokedexText[] = _(
     "Leaves grow out of this POKéMON's body.\n"
     "They help obscure a GROVYLE from the eyes\n"

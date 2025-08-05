@@ -3048,6 +3048,30 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
+    [NATIONAL_DEX_DARTRIX] =
+    {
+        .categoryName = _("BLADE QUILL"),
+        .height = 7,
+        .weight = 160,
+        .description = gDartrixPokedexText,
+        .pokemonScale = 541,
+        .pokemonOffset = 19,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_DECIDUEYE] =
+    {
+        .categoryName = _("ARROW QUILL"),
+        .height = 16,
+        .weight = 366,
+        .description = gDecidueyePokedexText,
+        .pokemonScale = 541,
+        .pokemonOffset = 19,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
     [NATIONAL_DEX_GROVYLE] =
     {
         .categoryName = _("WOOD GECKO"),
