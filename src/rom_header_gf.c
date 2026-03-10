@@ -28,7 +28,7 @@ struct GFRomHeader
     const u8 *monIconPaletteIds;
     const struct SpritePalette *monIconPalettes;
     const u8 (*monSpeciesNames)[];
-    const u8 (*moveNames)[];
+    const u8 *const *moveNames;
     const struct Decoration *decorations;
     u32 flagsOffset;
     u32 varsOffset;
@@ -108,7 +108,7 @@ static const struct GFRomHeader sGFRomHeader = {
     .monIconPaletteIds = gMonIconPaletteIndices,
     .monIconPalettes = gMonIconPaletteTable,
     .monSpeciesNames = gSpeciesNames,
-    .moveNames = gMoveNames,
+    .moveNames = gMoveNamePointers,
     .decorations = gDecorations,
     .flagsOffset = offsetof(struct SaveBlock1, flags),
     .varsOffset = offsetof(struct SaveBlock1, vars),

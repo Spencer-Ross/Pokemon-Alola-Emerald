@@ -771,6 +771,24 @@ static const struct MenuAction MultichoiceList_TagMatchType[] =
     {gText_Exit},
 };
 
+static const u8 sEvolutionTest_Rowlet[] = _("ROWLET");
+static const u8 sEvolutionTest_Litten[] = _("LITTEN");
+static const u8 sEvolutionTest_Popplio[] = _("POPPLIO");
+static const u8 sEvolutionTest_Dartrix[] = _("DARTRIX");
+static const u8 sEvolutionTest_Torracat[] = _("TORRACAT");
+static const u8 sEvolutionTest_Brionne[] = _("BRIONNE");
+
+static const struct MenuAction MultichoiceList_EvolutionTest[] =
+{
+    {sEvolutionTest_Rowlet},
+    {sEvolutionTest_Litten},
+    {sEvolutionTest_Popplio},
+    {sEvolutionTest_Dartrix},
+    {sEvolutionTest_Torracat},
+    {sEvolutionTest_Brionne},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -898,6 +916,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_SLATEPORT_TENT_RULES]       = MULTICHOICE(MultichoiceList_SlateportTentRules),
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
+    [MULTI_EVOLUTION_TEST]             = MULTICHOICE(MultichoiceList_EvolutionTest),
 };
 
 const u8 *const gStdStrings[] =

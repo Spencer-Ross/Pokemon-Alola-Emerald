@@ -3036,42 +3036,6 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_ROWLET] =
-    {
-        .categoryName = _("GRASS QUILL"),
-        .height = 3,
-        .weight = 40,
-        .description = gRowletPokedexText,
-        .pokemonScale = 541,
-        .pokemonOffset = 19,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-    },
-
-    [NATIONAL_DEX_DARTRIX] =
-    {
-        .categoryName = _("BLADE QUILL"),
-        .height = 7,
-        .weight = 160,
-        .description = gDartrixPokedexText,
-        .pokemonScale = 541,
-        .pokemonOffset = 19,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-    },
-
-    [NATIONAL_DEX_DECIDUEYE] =
-    {
-        .categoryName = _("ARROW QUILL"),
-        .height = 16,
-        .weight = 366,
-        .description = gDecidueyePokedexText,
-        .pokemonScale = 541,
-        .pokemonOffset = 19,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-    },
-
     [NATIONAL_DEX_GROVYLE] =
     {
         .categoryName = _("WOOD GECKO"),
@@ -4678,5 +4642,113 @@ const struct PokedexEntry gPokedexEntries[] =
         .pokemonOffset = 0,
         .trainerScale = 290,
         .trainerOffset = 2,
+    },
+
+    [NATIONAL_DEX_ROWLET] =
+    {
+        .categoryName = _("GRASS QUILL"),
+        .height = 3,
+        .weight = 40,
+        .description = gRowletPokedexText,
+        .pokemonScale = 541,
+        .pokemonOffset = 19,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_DARTRIX] =
+    {
+        .categoryName = _("BLADE QUILL"),
+        .height = 7,
+        .weight = 160,
+        .description = gDartrixPokedexText,
+        .pokemonScale = 541,
+        .pokemonOffset = 19,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_DECIDUEYE] =
+    {
+        .categoryName = _("ARROW QUILL"),
+        .height = 16,
+        .weight = 366,
+        .description = gDecidueyePokedexText,
+        .pokemonScale = 541,
+        .pokemonOffset = 19,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_LITTEN] =
+    {
+        .categoryName = _("FIRE CAT"),
+        .height = 4,
+        .weight = 43,
+        .description = gDummyPokedexText,
+        .pokemonScale = 541,
+        .pokemonOffset = 19,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_TORRACAT] =
+    {
+        .categoryName = _("FIRE CAT"),
+        .height = 7,
+        .weight = 250,
+        .description = gDummyPokedexText,
+        .pokemonScale = 541,
+        .pokemonOffset = 19,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_INCINEROAR] =
+    {
+        .categoryName = _("HEEL"),
+        .height = 18,
+        .weight = 830,
+        .description = gDummyPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_POPPLIO] =
+    {
+        .categoryName = _("SEA LION"),
+        .height = 4,
+        .weight = 75,
+        .description = gDummyPokedexText,
+        .pokemonScale = 541,
+        .pokemonOffset = 19,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_BRIONNE] =
+    {
+        .categoryName = _("POP STAR"),
+        .height = 6,
+        .weight = 175,
+        .description = gDummyPokedexText,
+        .pokemonScale = 541,
+        .pokemonOffset = 19,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_PRIMARINA] =
+    {
+        .categoryName = _("SOLOIST"),
+        .height = 18,
+        .weight = 440,
+        .description = gDummyPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
     },
 };

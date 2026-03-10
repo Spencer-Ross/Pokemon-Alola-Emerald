@@ -1495,6 +1495,30 @@ Cry_Decidueye::
 	.incbin "sound/direct_sound_samples/cries/decidueye.bin"
 
 	.align 2
+Cry_Litten::
+	.incbin "sound/direct_sound_samples/cries/litten.bin"
+
+	.align 2
+Cry_Torracat::
+	.incbin "sound/direct_sound_samples/cries/torracat.bin"
+
+	.align 2
+Cry_Incineroar::
+	.incbin "sound/direct_sound_samples/cries/incineroar.bin"
+
+	.align 2
+Cry_Popplio::
+	.incbin "sound/direct_sound_samples/cries/popplio.bin"
+
+	.align 2
+Cry_Brionne::
+	.incbin "sound/direct_sound_samples/cries/brionne.bin"
+
+	.align 2
+Cry_Primarina::
+	.incbin "sound/direct_sound_samples/cries/primarina.bin"
+
+	.align 2
 Cry_Grovyle::
 	.incbin "sound/direct_sound_samples/cries/grovyle.bin"
 

@@ -4356,7 +4356,7 @@ static void DoTVShowBravoTrainerPokemonProfile(void)
         break;
     case 6:
         StringCopy(gStringVar1, gSpeciesNames[show->bravoTrainer.species]);
-        StringCopy(gStringVar2, gMoveNames[show->bravoTrainer.move]);
+        StringCopy(gStringVar2, GetMoveName(show->bravoTrainer.move));
         CopyEasyChatWord(gStringVar3, show->bravoTrainer.words[1]);
         sTVShowState = 7;
         break;
@@ -5186,7 +5186,7 @@ static void DoTVShowPokemonContestLiveUpdates(void)
         break;
     case CONTESTLIVE_STATE_USED_MOVE:
         StringCopy(gStringVar2, gSpeciesNames[show->contestLiveUpdates.winningSpecies]);
-        StringCopy(gStringVar3, gMoveNames[show->contestLiveUpdates.move]);
+        StringCopy(gStringVar3, GetMoveName(show->contestLiveUpdates.move));
         sTVShowState = CONTESTLIVE_STATE_TALK_ABOUT_LOSER;
         break;
     case CONTESTLIVE_STATE_TALK_ABOUT_LOSER:
@@ -5293,7 +5293,7 @@ static void DoTVShowPokemonBattleUpdate(void)
     case 2:
         TVShowConvertInternationalString(gStringVar1, show->battleUpdate.playerName, show->battleUpdate.language);
         StringCopy(gStringVar2, gSpeciesNames[show->battleUpdate.speciesPlayer]);
-        StringCopy(gStringVar3, gMoveNames[show->battleUpdate.move]);
+        StringCopy(gStringVar3, GetMoveName(show->battleUpdate.move));
         sTVShowState = 3;
         break;
     case 3:
@@ -5314,7 +5314,7 @@ static void DoTVShowPokemonBattleUpdate(void)
     case 6:
         TVShowConvertInternationalString(gStringVar1, show->battleUpdate.playerName, show->battleUpdate.language);
         StringCopy(gStringVar2, gSpeciesNames[show->battleUpdate.speciesPlayer]);
-        StringCopy(gStringVar3, gMoveNames[show->battleUpdate.move]);
+        StringCopy(gStringVar3, GetMoveName(show->battleUpdate.move));
         sTVShowState = 7;
         break;
     case 7:
@@ -5456,7 +5456,7 @@ void DoTVShowInSearchOfTrainers(void)
         break;
     case 3:
         StringCopy(gStringVar1, gSpeciesNames[gSaveBlock1Ptr->gabbyAndTyData.mon1]);
-        StringCopy(gStringVar2, gMoveNames[gSaveBlock1Ptr->gabbyAndTyData.lastMove]);
+        StringCopy(gStringVar2, GetMoveName(gSaveBlock1Ptr->gabbyAndTyData.lastMove));
         StringCopy(gStringVar3, gSpeciesNames[gSaveBlock1Ptr->gabbyAndTyData.mon2]);
         sTVShowState = 8;
         break;
@@ -5886,7 +5886,7 @@ static void DoTVShowBreakingNewsTV(void)
         }
         break;
     case 7:
-        StringCopy(gStringVar1, gMoveNames[show->breakingNews.lastUsedMove]);
+        StringCopy(gStringVar1, GetMoveName(show->breakingNews.lastUsedMove));
         StringCopy(gStringVar2, gSpeciesNames[show->breakingNews.poke1Species]);
         sTVShowState = 8;
         break;
@@ -5986,7 +5986,7 @@ static void DoTVShowSecretBaseVisit(void)
     case 12:
         TVShowConvertInternationalString(gStringVar1, show->secretBaseVisit.playerName, show->secretBaseVisit.language);
         StringCopy(gStringVar2, gSpeciesNames[show->secretBaseVisit.species]);
-        StringCopy(gStringVar3, gMoveNames[show->secretBaseVisit.move]);
+        StringCopy(gStringVar3, GetMoveName(show->secretBaseVisit.move));
         sTVShowState = 13;
         break;
     case 13:
@@ -6037,7 +6037,7 @@ static void DoTVShowThePokemonBattleSeminar(void)
     case 1:
         TVShowConvertInternationalString(gStringVar1, show->battleSeminar.playerName, show->battleSeminar.language);
         StringCopy(gStringVar2, gSpeciesNames[show->battleSeminar.foeSpecies]);
-        StringCopy(gStringVar3, gMoveNames[show->battleSeminar.move]);
+        StringCopy(gStringVar3, GetMoveName(show->battleSeminar.move));
         sTVShowState = 2;
         break;
     case 2:
@@ -6059,23 +6059,23 @@ static void DoTVShowThePokemonBattleSeminar(void)
         }
         break;
     case 3:
-        StringCopy(gStringVar1, gMoveNames[show->battleSeminar.otherMoves[0]]);
-        StringCopy(gStringVar2, gMoveNames[show->battleSeminar.otherMoves[1]]);
-        StringCopy(gStringVar3, gMoveNames[show->battleSeminar.otherMoves[2]]);
+        StringCopy(gStringVar1, GetMoveName(show->battleSeminar.otherMoves[0]));
+        StringCopy(gStringVar2, GetMoveName(show->battleSeminar.otherMoves[1]));
+        StringCopy(gStringVar3, GetMoveName(show->battleSeminar.otherMoves[2]));
         sTVShowState = 6;
         break;
     case 4:
-        StringCopy(gStringVar1, gMoveNames[show->battleSeminar.otherMoves[0]]);
-        StringCopy(gStringVar2, gMoveNames[show->battleSeminar.otherMoves[1]]);
+        StringCopy(gStringVar1, GetMoveName(show->battleSeminar.otherMoves[0]));
+        StringCopy(gStringVar2, GetMoveName(show->battleSeminar.otherMoves[1]));
         sTVShowState = 6;
         break;
     case 5:
-        StringCopy(gStringVar2, gMoveNames[show->battleSeminar.otherMoves[0]]);
+        StringCopy(gStringVar2, GetMoveName(show->battleSeminar.otherMoves[0]));
         sTVShowState = 6;
         break;
     case 6:
-        StringCopy(gStringVar1, gMoveNames[show->battleSeminar.betterMove]);
-        StringCopy(gStringVar2, gMoveNames[show->battleSeminar.move]);
+        StringCopy(gStringVar1, GetMoveName(show->battleSeminar.betterMove));
+        StringCopy(gStringVar2, GetMoveName(show->battleSeminar.move));
         TVShowDone();
         break;
     }

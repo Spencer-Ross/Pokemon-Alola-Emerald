@@ -249,6 +249,63 @@ LittlerootTown_EventScript_Boy::
 	msgbox LittlerootTown_Text_BirchSpendsDaysInLab, MSGBOX_NPC
 	end
 
+LittlerootTown_EventScript_EvolutionTester::
+	lock
+	faceplayer
+	msgbox LittlerootTown_Text_EvolutionTesterPrompt, MSGBOX_DEFAULT
+	closemessage
+	multichoice 0, 0, MULTI_EVOLUTION_TEST, FALSE
+	switch VAR_RESULT
+	case 0, LittlerootTown_EventScript_EvolutionTest_Rowlet
+	case 1, LittlerootTown_EventScript_EvolutionTest_Litten
+	case 2, LittlerootTown_EventScript_EvolutionTest_Popplio
+	case 3, LittlerootTown_EventScript_EvolutionTest_Dartrix
+	case 4, LittlerootTown_EventScript_EvolutionTest_Torracat
+	case 5, LittlerootTown_EventScript_EvolutionTest_Brionne
+	case 6, LittlerootTown_EventScript_EvolutionTester_Cancel
+	case MULTI_B_PRESSED, LittlerootTown_EventScript_EvolutionTester_Cancel
+	end
+
+LittlerootTown_EventScript_EvolutionTest_Rowlet::
+	setvar VAR_0x8000, SPECIES_ROWLET
+	goto LittlerootTown_EventScript_DoEvolutionTest
+	end
+
+LittlerootTown_EventScript_EvolutionTest_Litten::
+	setvar VAR_0x8000, SPECIES_LITTEN
+	goto LittlerootTown_EventScript_DoEvolutionTest
+	end
+
+LittlerootTown_EventScript_EvolutionTest_Popplio::
+	setvar VAR_0x8000, SPECIES_POPPLIO
+	goto LittlerootTown_EventScript_DoEvolutionTest
+	end
+
+LittlerootTown_EventScript_EvolutionTest_Dartrix::
+	setvar VAR_0x8000, SPECIES_DARTRIX
+	goto LittlerootTown_EventScript_DoEvolutionTest
+	end
+
+LittlerootTown_EventScript_EvolutionTest_Torracat::
+	setvar VAR_0x8000, SPECIES_TORRACAT
+	goto LittlerootTown_EventScript_DoEvolutionTest
+	end
+
+LittlerootTown_EventScript_EvolutionTest_Brionne::
+	setvar VAR_0x8000, SPECIES_BRIONNE
+	goto LittlerootTown_EventScript_DoEvolutionTest
+	end
+
+LittlerootTown_EventScript_DoEvolutionTest::
+	special SetupEvolutionTest
+	msgbox LittlerootTown_Text_EvolutionTestDone, MSGBOX_DEFAULT
+	release
+	end
+
+LittlerootTown_EventScript_EvolutionTester_Cancel::
+	release
+	end
+
 LittlerootTown_EventScript_Twin::
 	lock
 	faceplayer
@@ -989,6 +1046,14 @@ LittlerootTown_Text_YouSavedBirch:
 LittlerootTown_Text_GoodLuckCatchingPokemon:
 	.string "Are you going to catch POKéMON?\n"
 	.string "Good luck!$"
+
+LittlerootTown_Text_EvolutionTesterPrompt:
+	.string "I can set up your party for evolution\n"
+	.string "testing. Choose a POKéMON.$"
+
+LittlerootTown_Text_EvolutionTestDone:
+	.string "Done! Use the RARE CANDY on your\n"
+	.string "POKéMON to test evolution.$"
 
 LittlerootTown_Text_TownSign:
 	.string "LITTLEROOT TOWN\n"
