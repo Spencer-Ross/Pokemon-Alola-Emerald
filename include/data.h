@@ -137,6 +137,14 @@ extern const struct CompressedSpriteSheet gMonFrontPicTable[];
 extern const struct Trainer gTrainers[];
 extern const u8 gTrainerClassNames[][13];
 extern const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1];
-extern const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1];
+// Variable-length move names (expansion-style); use GetMoveName(move) to get string.
+extern const u8 *const gMoveNamePointers[MOVES_COUNT];
+
+static inline const u8 *GetMoveName(u32 moveId)
+{
+    if (moveId >= MOVES_COUNT)
+        moveId = 0;
+    return gMoveNamePointers[moveId];
+}
 
 #endif // GUARD_DATA_H

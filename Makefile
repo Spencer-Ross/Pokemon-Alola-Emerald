@@ -3,7 +3,7 @@ TITLE       := POKEMON EMER
 GAME_CODE   := BPEE
 MAKER_CODE  := 01
 REVISION    := 0
-MODERN      ?= 0
+MODERN      ?= 1
 KEEP_TEMPS  ?= 0
 
 # `File name`.gba ('_modern' will be appended to the modern builds)
@@ -11,7 +11,7 @@ FILE_NAME := pokeemerald
 BUILD_DIR := build
 
 # Builds the ROM using a modern compiler
-MODERN      ?= 0
+MODERN      ?= 1
 # Compares the ROM to a checksum of the original - only makes sense using when non-modern
 COMPARE     ?= 0
 
@@ -161,7 +161,7 @@ MAKEFLAGS += --no-print-directory
 .DELETE_ON_ERROR:
 
 RULES_NO_SCAN += libagbsyscall clean clean-assets tidy tidymodern tidynonmodern generated clean-generated
-.PHONY: all rom modern compare
+.PHONY: all rom modern compare test-evolution
 .PHONY: $(RULES_NO_SCAN)
 
 infoshell = $(foreach line, $(shell $1 | sed "s/ /__SPACE__/g"), $(info $(subst __SPACE__, ,$(line))))
@@ -233,6 +233,11 @@ ifeq ($(COMPARE),1)
 	@$(SHA1) rom.sha1
 endif
 
+# Build ROM for evolution testing. Load the ROM, go to Littleroot Town, and talk to
+# the Evolution Tester NPC (scientist) to set party + Rare Candy for the chosen species.
+test-evolution: rom
+	@echo "Evolution test: ROM built. Load $(ROM), go to Littleroot Town, talk to the Evolution Tester NPC."
+
 syms: $(SYM)
 
 clean: tidy clean-tools clean-generated clean-assets
@@ -262,6 +267,11 @@ include map_data_rules.mk
 include spritesheet_rules.mk
 include json_data_rules.mk
 include audio_rules.mk
+
+# Species constants: generated from single source of truth (data/species_list.txt)
+AUTO_GEN_TARGETS += include/constants/species.h
+include/constants/species.h: data/species_list.txt scripts/generate_species_data.py
+	python3 scripts/generate_species_data.py
 
 # NOTE: Tools must have been built prior (FIXME)
 # so you can't really call this rule directly

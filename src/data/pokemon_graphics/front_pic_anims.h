@@ -1,4 +1,4 @@
-﻿static const union AnimCmd sAnim_None_1[] =
+static const union AnimCmd sAnim_None_1[] =
 {
     ANIMCMD_FRAME(0, 30),
     ANIMCMD_FRAME(1, 30),
@@ -3026,6 +3026,68 @@ static const union AnimCmd sAnim_Blaziken_4[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_Litten_1[] =
+{
+    ANIMCMD_FRAME(0, 6),
+    ANIMCMD_FRAME(1, 15),
+    ANIMCMD_FRAME(0, 6),
+    ANIMCMD_FRAME(1, 15),
+    ANIMCMD_FRAME(0, 3),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_Torracat_1[] =
+{
+    ANIMCMD_FRAME(0, 6),
+    ANIMCMD_FRAME(1, 15),
+    ANIMCMD_FRAME(0, 6),
+    ANIMCMD_FRAME(1, 15),
+    ANIMCMD_FRAME(0, 3),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_Incineroar_1[] =
+{
+    ANIMCMD_FRAME(0, 6),
+    ANIMCMD_FRAME(1, 15),
+    ANIMCMD_FRAME(0, 6),
+    ANIMCMD_FRAME(1, 15),
+    ANIMCMD_FRAME(0, 3),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_Popplio_1[] =
+{
+    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_FRAME(1, 8),
+    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_FRAME(1, 13),
+    ANIMCMD_FRAME(0, 7),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_Brionne_1[] =
+{
+    ANIMCMD_FRAME(0, 5),
+    ANIMCMD_FRAME(1, 5),
+    ANIMCMD_FRAME(0, 5),
+    ANIMCMD_FRAME(1, 5),
+    ANIMCMD_FRAME(0, 5),
+    ANIMCMD_FRAME(1, 5),
+    ANIMCMD_FRAME(0, 5),
+    ANIMCMD_FRAME(1, 5),
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_Primarina_1[] =
+{
+    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_FRAME(1, 15),
+    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_Mudkip_1[] =
 {
     ANIMCMD_FRAME(0, 10),
@@ -5120,6 +5182,12 @@ static const union AnimCmd *const sAnims_Blaziken[] ={
     sAnim_Blaziken_3,
     sAnim_Blaziken_4,
 };
+SINGLE_ANIMATION(Litten);
+SINGLE_ANIMATION(Torracat);
+SINGLE_ANIMATION(Incineroar);
+SINGLE_ANIMATION(Popplio);
+SINGLE_ANIMATION(Brionne);
+SINGLE_ANIMATION(Primarina);
 SINGLE_ANIMATION(Mudkip);
 SINGLE_ANIMATION(Marshtomp);
 SINGLE_ANIMATION(Swampert);
@@ -5565,9 +5633,6 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     [SPECIES_OLD_UNOWN_Y] = sAnims_OldUnownB,
     [SPECIES_OLD_UNOWN_Z] = sAnims_OldUnownB,
     [SPECIES_TREECKO]     = sAnims_Treecko,
-    [SPECIES_ROWLET]     = sAnims_Rowlet,
-    [SPECIES_DARTRIX]     = sAnims_Dartrix,
-    [SPECIES_DECIDUEYE]   = sAnims_Decidueye,
     [SPECIES_GROVYLE]     = sAnims_Grovyle,
     [SPECIES_SCEPTILE]    = sAnims_Sceptile,
     [SPECIES_TORCHIC]     = sAnims_Torchic,
@@ -5702,6 +5767,15 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     [SPECIES_JIRACHI]     = sAnims_Jirachi,
     [SPECIES_DEOXYS]      = sAnims_Deoxys,
     [SPECIES_CHIMECHO]    = sAnims_Chimecho,
+    [SPECIES_ROWLET]     = sAnims_Rowlet,
+    [SPECIES_DARTRIX]     = sAnims_Dartrix,
+    [SPECIES_DECIDUEYE]   = sAnims_Decidueye,
+    [SPECIES_LITTEN]      = sAnims_Litten,
+    [SPECIES_TORRACAT]   = sAnims_Torracat,
+    [SPECIES_INCINEROAR]  = sAnims_Incineroar,
+    [SPECIES_POPPLIO]     = sAnims_Popplio,
+    [SPECIES_BRIONNE]     = sAnims_Brionne,
+    [SPECIES_PRIMARINA]   = sAnims_Primarina,
     [SPECIES_EGG]         = sAnims_Egg,
     [SPECIES_UNOWN_B]     = sAnims_UnownB,
     [SPECIES_UNOWN_C]     = sAnims_UnownC,

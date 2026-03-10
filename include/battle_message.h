@@ -1,10 +1,12 @@
 #ifndef GUARD_BATTLE_MESSAGE_H
 #define GUARD_BATTLE_MESSAGE_H
 
+#include "constants/global.h"
+
 // This buffer can hold many different things. Some of the things it can hold
 // that have explicit sizes are listed below to ensure it can contain them.
 #define TEXT_BUFF_ARRAY_COUNT   max(16, \
-                                max(MOVE_NAME_LENGTH + 2, /* +2 to hold the "!" and EOS. */ \
+                                max(MAX_MOVE_NAME_DISPLAY + 2, /* +2 to hold the "!" and EOS. */ \
                                     POKEMON_NAME_LENGTH + 1))
 
 // for 0xFD

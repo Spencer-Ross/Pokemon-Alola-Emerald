@@ -54,7 +54,12 @@
 #include "constants/field_effects.h"
 #include "constants/field_specials.h"
 #include "constants/items.h"
+#include "constants/pokemon.h"
+#include "constants/vars.h"
 #include "constants/heal_locations.h"
+#include "constants/species.h"
+#include "item.h"
+#include "script_pokemon_util.h"
 #include "constants/map_types.h"
 #include "constants/mystery_gift.h"
 #include "constants/slot_machine.h"
@@ -1639,7 +1644,7 @@ bool8 BufferTMHMMoveName(void)
 {
     if (gSpecialVar_0x8004 >= ITEM_TM01 && gSpecialVar_0x8004 <= ITEM_HM08)
     {
-        StringCopy(gStringVar2, gMoveNames[ItemIdToBattleMoveId(gSpecialVar_0x8004)]);
+        StringCopy(gStringVar2, GetMoveName(ItemIdToBattleMoveId(gSpecialVar_0x8004)));
         return TRUE;
     }
 
@@ -3087,9 +3092,9 @@ static const u16 sBattleFrontier_TutorMoves2[] =
 void BufferBattleFrontierTutorMoveName(void)
 {
     if (gSpecialVar_0x8005 != 0)
-        StringCopy(gStringVar1, gMoveNames[sBattleFrontier_TutorMoves2[gSpecialVar_0x8004]]);
+        StringCopy(gStringVar1, GetMoveName(sBattleFrontier_TutorMoves2[gSpecialVar_0x8004]));
     else
-        StringCopy(gStringVar1, gMoveNames[sBattleFrontier_TutorMoves1[gSpecialVar_0x8004]]);
+        StringCopy(gStringVar1, GetMoveName(sBattleFrontier_TutorMoves1[gSpecialVar_0x8004]));
 }
 
 static void ShowBattleFrontierTutorWindow(u8 menu, u16 selection)
@@ -4267,4 +4272,38 @@ void SetPlayerGotFirstFans(void)
 u8 Script_TryGainNewFanFromCounter(void)
 {
     return TryGainNewFanFromCounter(gSpecialVar_0x8004);
+}
+
+// Evolution test: set party to one mon at (evolve_level - 1) and give one Rare Candy.
+// Script should set VAR_0x8000 to the species id before calling this special.
+extern const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON];
+
+void SetupEvolutionTest(void)
+{
+    u16 species = VarGet(VAR_0x8000);
+    u8 evolveLevel = 1;
+    u8 level;
+    int i;
+
+    if (species == SPECIES_NONE || species >= NUM_SPECIES)
+        return;
+
+    for (i = 0; i < EVOS_PER_MON; i++)
+    {
+        u16 method = gEvolutionTable[species][i].method;
+        if (method == EVO_LEVEL || method == EVO_LEVEL_ATK_GT_DEF || method == EVO_LEVEL_ATK_EQ_DEF
+            || method == EVO_LEVEL_ATK_LT_DEF || method == EVO_LEVEL_SILCOON || method == EVO_LEVEL_CASCOON
+            || method == EVO_LEVEL_NINJASK || method == EVO_LEVEL_SHEDINJA)
+        {
+            evolveLevel = (u8)gEvolutionTable[species][i].param;
+            break;
+        }
+    }
+
+    level = evolveLevel > 1 ? evolveLevel - 1 : 1;
+
+    ZeroPlayerPartyMons();
+    CalculatePlayerPartyCount();
+    ScriptGiveMon(species, level, ITEM_NONE, 0, 0, 0);
+    AddBagItem(ITEM_RARE_CANDY, 1);
 }

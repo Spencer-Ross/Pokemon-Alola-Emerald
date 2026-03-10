@@ -97,7 +97,8 @@
 #define PLAYER_NAME_LENGTH 7
 #define MAIL_WORDS_COUNT 9
 #define EASY_CHAT_BATTLE_WORDS_COUNT 6
-#define MOVE_NAME_LENGTH 12
+#define MOVE_NAME_LENGTH 12  // Legacy; display uses variable-length names via GetMoveName
+#define MAX_MOVE_NAME_DISPLAY 20  // Buffer size for move names (battle/UI); allows longer names
 #define NUM_QUESTIONNAIRE_WORDS 4
 #define QUIZ_QUESTION_LEN 9
 #define WONDER_CARD_TEXT_LENGTH 40

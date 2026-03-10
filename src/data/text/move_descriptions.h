@@ -1417,6 +1417,18 @@ static const u8 sPsychoBoostDescription[] = _(
     "Allows a full-power attack,\n"
     "but sharply lowers SP. ATK.");
 
+static const u8 sFairyWindDescription[] = _(
+    "The user stirs up a fairy\n"
+    "wind to strike the foe.");
+
+static const u8 sMoonblastDescription[] = _(
+    "A strong blast that may\n"
+    "lower the foe's SP. ATK.");
+
+static const u8 sDazzlingGleamDescription[] = _(
+    "The user damages the foe\n"
+    "with a powerful flash.");
+
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
 {
@@ -1774,4 +1786,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_WATER_PULSE - 1] = sWaterPulseDescription,
     [MOVE_DOOM_DESIRE - 1] = sDoomDesireDescription,
     [MOVE_PSYCHO_BOOST - 1] = sPsychoBoostDescription,
+    [MOVE_FAIRY_WIND - 1] = sFairyWindDescription,
+    [MOVE_MOONBLAST - 1] = sMoonblastDescription,
+    [MOVE_DAZZLING_GLEAM - 1] = sDazzlingGleamDescription,
 };
